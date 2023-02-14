@@ -8,6 +8,10 @@ services:
     ports:
       - "2000:5000"
     restart: on-failure
+    environment:
+      - JWT_SECRET=03ad85ed89b67a030a6529ae14bf5744b3905da9
+      - JWT_ALGORITHM=HS256
+      - TOKEN_EXPIRY=300
     volumes:
       # reloading when file changed
       - ./src:/app/src

@@ -5,7 +5,7 @@ import os
 
 JWT_SECRET = os.environ.get("JWT_SECRET", "568547a4b6cdb154f4f5374cd3b1105acd7c63b9")
 JWT_ALGORITHM = os.environ.get("JWT_ALGORITHM", "HS256")
-TOKEN_EXPIRY = os.environ.get("TOKEN_EXPIRY", 120)
+TOKEN_EXPIRY = os.environ.get("TOKEN_EXPIRY", 300) # 5 min 
 
 
 def signJWT(user: str):
